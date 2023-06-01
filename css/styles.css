@@ -1,0 +1,13 @@
+.modal-field {
+  padding: 32px 24px;
+}
+.form-label {
+  display: block;
+}
+.form-input-name {
+  display: flex;
+  flex-direction: column;
+}
+.modal-input {
+  display: block;
+}

@@ -1,12 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Привіт</h1>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="backdrop is-hidden" data-modal>
+      <button class="modal-btn" type="button" data-modal-close>
+        <svg class="modal-icon" width="12" height="12">
+          <use href=""></use>
+        </svg>
+      </button>
+      <div class="modal">
+        <h1 class="modal-title">
+          <span class="modal-title-left-side">BUY</span>NOW
+        </h1>
+        <ul class="modal-list list">
+          <li class="modal-item">
+            <img class="modal-img" src="" alt="" width="" height="" />
+            <p class="modal-text">100 g</p>
+          </li>
+          <li class="modal-item">
+            <img class="modal-img" src="" alt="" width="" height="" />
+            <p class="modal-text">200 g</p>
+          </li>
+          <li class="modal-item">
+            <img class="modal-img" src="" alt="" width="" height="" />
+            <p class="modal-text">300 g</p>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-field">
+        <form class="modal-form" name="contacts_form">
+          <label class="form-label"
+            >Personal information
+            <div class="form-input-name">
+              <input
+                class="form-input"
+                type="text"
+                name="user_name"
+                placeholder="Name"
+                required
+              />
+              <input
+                class="form-input"
+                type="text"
+                name="user_surname"
+                placeholder="Surname"
+                required
+              />
+            </div> </label
+          ><label class="form-label" for="email">Email</label
+          ><input
+            class="form-input"
+            type="email"
+            name="user_email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label class="form-label" for="tel">Phone number</label>
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="tel"
+              name="user_phone"
+              id="tel"
+              placeholder="Phone number"
+              required
+            />
+            <svg class="form-icon-tel" width="24" height="24">
+              <use href=""></use>
+            </svg>
+          </div>
+          <label class="form-label" for="card">Card number</label>
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="number"
+              name="user_card"
+              id="card"
+              placeholder="Enter card"
+              required
+            />
+            <svg class="form-icon-card" width="32" height="21">
+              <use href=""></use>
+            </svg>
+          </div>
+          <label for="comment" class="form-label">Comment</label
+          ><textarea
+            class="form-comment"
+            name="comment"
+            id="comment"
+            rows="6"
+            placeholder="Enter text"
+          ></textarea>
+          <button class="form-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="backdrop is-hidden">
+      <button class="modal-btn" type="button" data-modal-close>
+        <svg class="modal-icon" width="12" height="12">
+          <use href=""></use>
+        </svg>
+      </button>
+      <div class="modal">
+        <h1 class="modal-title">
+          LEAVE A REVIEW ABOUT
+          <span class="modal-title-right-side">OUR CHOCOLATE</span>
+        </h1>
+        <form class="modal-form" name="review_form">
+          <input
+            class="modal-input"
+            type="text"
+            name="user_name"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="modal-input"
+            type="email"
+            name="user_email"
+            placeholder="Enter your email"
+            required
+          />
+          <!-- <label class="form-label" for="tel"></label> -->
+          <div class="form-field">
+              <input
+                class="modal-input"
+                type="tel"
+                name="user_phone"
+                id="tel"
+                placeholder="Phone number"
+                required
+              />
+              <svg class="form-icon-tel" width="24" height="24">
+                <use href=""></use>
+              </svg>
+          </div>
+          <textarea
+            class="form-comment"
+            name="comment"
+            rows="6"
+            placeholder="Enter text"
+          ></textarea>
+          <button class="form-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <div class="backdrop is-hidden">
+      <button class="modal-btn" type="button" data-modal-close>
+        <svg class="modal-icon" width="12" height="12">
+          <use href=""></use>
+        </svg>
+      </button>
+      <h1>EXPLORE OUR NEW CHOCOLATE FIRST!</h1>
+      <form class="modal-form" name="email_form">
+        <input
+          class="form-input"
+          type="email"
+          name="user_email"
+          placeholder="Enter your email"
+          required
+        />
+        <button class="form-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="./js/maskinput.js"></script>
+    <script type="text/javascript">
+      jQuery(function ($) {
+        $("#tel").mask("+38(999) 999-9999");
+      });
+    </script>
+  </body>
 </html>
