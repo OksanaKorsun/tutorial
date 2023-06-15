@@ -12,108 +12,123 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="backdrop is-hidden" data-modal="1">
-      <button class="modal-btn" type="button" js-modal-close>
-        <svg class="modal-icon" width="12" height="12">
-          <use href=""></use>
-        </svg>
-      </button>
+    <div class="modalbynow overlay js-overlay-modal" data-modal="1">
       <div class="modal">
-        <h1 class="modal-title">
-          <span class="modal-title-left-side">BUY</span>NOW
-        </h1>
-        <ul class="modal-list list">
-          <li class="modal-item">
-            <img class="modal-img" src="" alt="" width="" height="" />
-            <p class="modal-text">100 g</p>
-          </li>
-          <li class="modal-item">
-            <img class="modal-img" src="" alt="" width="" height="" />
-            <p class="modal-text">200 g</p>
-          </li>
-          <li class="modal-item">
-            <img class="modal-img" src="" alt="" width="" height="" />
-            <p class="modal-text">300 g</p>
-          </li>
-        </ul>
-      </div>
-      <div class="modal-field">
-        <form class="modal-form" name="contacts_form">
-          <label class="form-label"
-            >Personal information
-            <div class="form-input-name">
-              <input
-                class="form-input"
-                type="text"
-                name="user_name"
-                placeholder="Name"
-                autocomplete="on"
-                pattern="^[a-zA-Z]+$"
-                
+        <button class="modal-btn" type="button" js-modal-close>
+          <svg class="modal-icon" width="12" height="12">
+            <use href="./images/symbol-defs.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal-field">
+          <h1 class="modal-title">
+            <span class="modal-title-accent">BUY </span>NOW
+          </h1>
+          <ul class="modal-order-list">
+            <li class="modal-item">
+              <img
+                class="modal-img"
+                src="./images/modal/chocolate-1-mob@1x.png"
+                alt="chocolate-100"
+                width="84"
+                height="69"
               />
-              <input
-                class="form-input"
-                type="text"
-                name="user_surname"
-                placeholder="Surname"
-                autocomplete="on"
-                pattern="^[a-zA-Z]+$"
-                
+              <button class="modal-order-btn">100 g</button>
+            </li>
+            <li class="modal-item">
+              <img
+                class="modal-img"
+                src="./images/modal/chocolate-2-mob@1x.png"
+                alt="chocolate-200"
+                width="84"
+                height="69"
               />
-            </div> </label
-          ><label class="form-label" for="email">Email</label
-          ><input
-            class="form-input"
-            type="email"
-            name="user_email"
-            id="email"
-            placeholder="Enter your email"
-            autocomplete="on"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])"
-            
-          />
-          <label class="form-label" for="tel">Phone number</label>
-          <div class="form-field">
-            <input
-              class="form-input"
-              type="tel"
-              name="user_phone"
-              pattern="[0-9]{,9}"
-              id="tel"
-              placeholder="Phone number"
-              
-            />
-            <svg class="form-icon-tel" width="24" height="24">
-              <use href=""></use>
-            </svg>
+              <button class="modal-order-btn">200 g</button>
+            </li>
+            <li class="modal-item">
+              <img
+                class="modal-img"
+                src="./images/modal/chocolate-3-mob@1x.png"
+                alt="chocolate-300"
+                width="84"
+                height="69"
+              />
+              <button class="modal-order-btn">300 g</button>
+            </li>
+          </ul>
+          <div class="modal-field-form">
+            <form class="modal-form" name="contacts_form">
+              <label class="form-label-name form-label"
+                >Personal information
+                <div class="form-input-name">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user_name"
+                    placeholder="Name"
+                    pattern=""
+                  />
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user_surname"
+                    placeholder="Surname"
+                    pattern=""
+                  />
+                </div>
+              </label>
+              <label class="form-label" for="email">Email</label
+              ><input
+                class="form-input form-input-email"
+                type="email"
+                name="user_email"
+                id="email"
+                placeholder="Enter your email"
+                pattern=""
+              />
+              <label class="form-label" for="tel">Phone number</label>
+              <div class="form-field-tel">
+                <input
+                  class="form-input form-input-tel"
+                  type="tel"
+                  name="user_phone"
+                  id="tel"
+                  placeholder="Phone number"
+                  pattern=""
+                />
+                <svg class="form-icon-tel" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-flag-icon"></use>
+                </svg>
+              </div>
+              <label class="form-label" for="card">Card number</label>
+              <div class="form-field-card">
+                <input
+                  class="form-input"
+                  type="number"
+                  name="user_card"
+                  id="card"
+                  placeholder="Enter card"
+                  pattern=""
+                />
+                <svg class="form-icon-card" width="32" height="21">
+                  <use href="./images/symbol-defs.svg#icon-mastercard"></use>
+                </svg>
+              </div>
+              <label for="comment" class="form-label">Comment</label
+              ><textarea
+                class="form-comment"
+                name="comment"
+                id="comment"
+                rows="6"
+                placeholder="Enter text"
+              ></textarea>
+              <button class="form-btn" type="submit" js-modal-close>
+                Submit
+              </button>
+            </form>
           </div>
-          <label class="form-label" for="card">Card number</label>
-          <div class="form-field">
-            <input
-              class="form-input"
-              type="number"
-              name="user_card"
-              id="card"
-              placeholder="Enter card"
-              
-            />
-            <svg class="form-icon-card" width="32" height="21">
-              <use href=""></use>
-            </svg>
-          </div>
-          <label for="comment" class="form-label">Comment</label
-          ><textarea
-            class="form-comment"
-            name="comment"
-            id="comment"
-            rows="6"
-            placeholder="Enter text"
-          ></textarea>
-          <button class="form-btn" type="submit">Submit</button>
-        </form>
+        </div>
       </div>
     </div>
-    <div class="overlay js-overlay-modal"></div>
 
     <div class="backdrop is-hidden" data-modal="2">
       <button class="modal-btn" type="button" js-modal-close>
@@ -143,7 +158,7 @@
             pattern="^(?=.*[a-z])(?=.*[A-Z])"
             required
           />
-          <!-- <label class="form-label" for="tel"></label> -->
+          
           <div class="form-field">
             <input
               class="modal-input"
